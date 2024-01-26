@@ -1,6 +1,8 @@
 const express = require("express");
+const cors = require('cors');
 const { MongoClient, ObjectId } = require("mongodb");
 const app = express();
+app.use(cors());
 const port = 3000;
 
 // Replace with your MongoDB Atlas connection string
