@@ -12,7 +12,7 @@ app.get("/read", async (req, res) => {
 
   try {
     await client.connect();
-    console.log("Connected to the database");
+    //console.log("Connected to the database");
 
     const database = client.db("yes_no_count");
     const collection = database.collection("yes_no_count");
@@ -25,7 +25,7 @@ app.get("/read", async (req, res) => {
     res.json(result);
   } finally {
     await client.close();
-    console.log("Connection to the database closed");
+    //console.log("Connection to the database closed");
   }
 });
 
@@ -35,7 +35,7 @@ app.get("/update", async (req, res) => {
 
   try {
     await client.connect();
-    console.log("Connected to the database");
+    //console.log("Connected to the database");
 
     const database = client.db("yes_no_count");
     const collection = database.collection("yes_no_count");
@@ -51,7 +51,7 @@ app.get("/update", async (req, res) => {
     res.json(result);
   } finally {
     await client.close();
-    console.log("Connection to the database closed");
+    //console.log("Connection to the database closed");
   }
 });
 
